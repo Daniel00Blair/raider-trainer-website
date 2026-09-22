@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raider Trainer | WSU Term Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Raider<span>Trainer</span></a>
+            <button class="nav-toggle" id="navToggle">&#9776;</button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="active">Overview</a></li>
+                    <li><a href="architecture.html">Architecture</a></li>
+                    <li><a href="deliverables.html">Deliverables</a></li>
+                    <li><a href="reports.html">Weekly Reports</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Wright State University | Term Project</span>
+            <h1>AI-Powered Exercise Form & Routine Tracker</h1>
+            <p>A full-stack desktop application combining computer vision pose estimation, automated OCR weight recognition, and real-time form scoring.</p>
+            <div class="hero-buttons">
+                <a href="deliverables.html" class="btn btn-primary">View Project Documents</a>
+                <a href="https://github.com/deepikaJirel/RaiderTrainer" target="_blank" class="btn btn-outline">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Project Demo Video Section -->
+    <section class="section container">
+        <h2 class="section-title">Live System Demonstration</h2>
+        <p class="section-subtitle">A comprehensive walkthrough of Raider Trainer's real-time pose tracking, OCR weight scanning, and UI capabilities.</p>
+        
+        <div class="video-container">
+            <!-- Loads a local video file from the assets folder -->
+            <video controls poster="assets/video_thumbnail.jpg">
+                <source src="assets/final_demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Hardware Requirements Section -->
+    <section class="section container bg-alt" style="padding-top: 3rem; padding-bottom: 3rem;">
+        <div class="hardware-box">
+            <h3>🖥️ System & Hardware Requirements</h3>
+            <ul class="hardware-list">
+                <li><strong>Minimum Resolution:</strong> 1280x720 desktop display to prevent UI clipping.</li>
+                <li><strong>Camera Requirement:</strong> Standard 720p integrated webcam or external USB camera capable of 30 FPS.</li>
+                <li><strong>Environmental Lighting:</strong> Adequate, well-lit room conditions are strictly required for the Optical Character Recognition (OCR) engine to accurately scan dumbbell weights.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section container">
+        <h2 class="section-title">System Features</h2>
+        <p class="section-subtitle">Tracking upper-body workouts in real-time, enforcing correct form thresholds, and monitoring strength training progress.</p>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-media">
+                    <img src="assets/yolo_bicep_curl.gif" alt="YOLOv8 Bicep Curl Tracking Demo">
+                </div>
+                <div class="feature-text">
+                    <h3>Side Profile: Bicep Curls</h3>
+                    <p>Leverages YOLOv8 keypoints to compute 2D joint angles (shoulder, elbow, wrist). Categorizes form into <strong>Correct</strong>, <strong>Intermediate</strong>, and <strong>Wrong</strong> tiers in real-time.</p>
+                </div>
+            </div>
+
+            <div class="feature-card reverse">
+                <div class="feature-media">
+                    <img src="assets/yolo_military_press.gif" alt="YOLOv8 Military Press Tracking Demo">
+                </div>
+                <div class="feature-text">
+                    <h3>Frontal Profile: Military Press</h3>
+                    <p>Tracks bilateral upper-body exercises, evaluating dual elbow extension thresholds simultaneously without joint occlusion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container bg-alt">
+        <h2 class="section-title">Additional Capabilities</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">🏷️</div>
+                <h3>Automated OCR Weight Scan</h3>
+                <p>Uses Optical Character Recognition (OCR) algorithms to automatically scan and identify the printed numbers on hand weights (5, 10, or 15 lbs) prior to a routine.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <h3>Account Security</h3>
+                <p>Role-based access control locking users out after 3 failed attempts, accompanied by an Admin management dashboard.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>Adaptive Analytics</h3>
+                <p>Evaluates post-workout user feedback to suggest adjusted reps and weights, rendering daily historical progress on embedded charts.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Raider Trainer Development Team. Built for WSU Term Project.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

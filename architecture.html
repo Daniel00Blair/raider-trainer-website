@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raider Trainer | Architecture</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Raider<span>Trainer</span></a>
+            <button class="nav-toggle" id="navToggle">&#9776;</button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="architecture.html" class="active">Architecture</a></li>
+                    <li><a href="deliverables.html">Deliverables</a></li>
+                    <li><a href="reports.html">Weekly Reports</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section container">
+        <h2 class="section-title">100% Python Architecture</h2>
+        <p class="section-subtitle">Built as a monolithic desktop application running multithreaded computer vision routines alongside local JSON data persistence.</p>
+
+        <div class="arch-box">
+            <div class="arch-tech-grid">
+                <div class="tech-item">
+                    <h4>UI & GUI Loop</h4>
+                    <p><strong>PyQt6 / PySide6</strong> event loop handling screen routing, user forms, and modal dialogs.</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Camera Thread</h4>
+                    <p><strong>OpenCV (cv2)</strong> background worker streaming 30 FPS video feeds.</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Pose Engine</h4>
+                    <p><strong>Ultralytics YOLOv8</strong> extracting 17 body keypoints in real time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start / Terminal Block -->
+    <section class="section container">
+        <h2 class="section-title">Quick Start Guide</h2>
+        <p class="section-subtitle">Instructions for cloning, compiling, and running the Raider Trainer application locally.</p>
+        
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">bash</span>
+            </div>
+            <div class="terminal-body">
+                <code><span class="prompt">$</span> git clone https://github.com/deepikaJirel/RaiderTrainer.git</code><br>
+                <code><span class="prompt">$</span> cd RaiderTrainer</code><br>
+                <code><span class="prompt">$</span> python -m venv venv</code><br>
+                <code><span class="prompt">$</span> source venv/bin/activate  <span class="comment"># or venv\Scripts\activate on Windows</span></code><br>
+                <code><span class="prompt">$</span> pip install -r requirements.txt</code><br>
+                <code><span class="prompt">$</span> python main.py</code>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Raider Trainer Development Team. Built for WSU Term Project.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
