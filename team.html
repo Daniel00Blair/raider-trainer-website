@@ -3,58 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raider Trainer | Team</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Raider Trainer | Team & Roles</title>
+    <style>
+        :root {
+            --wsu-green: #026937;
+            --wsu-dark-green: #014d28;
+            --wsu-gold: #F2A900;
+            --bg-color: #f3f4f6;
+            --text-main: #111827;
+            --card-bg: #ffffff;
+            --border-color: #d1d5db;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--wsu-green);
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid var(--wsu-gold);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        nav {
+            background-color: var(--wsu-dark-green);
+            display: flex;
+            justify-content: center;
+            padding: 0.75rem;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--wsu-gold);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--wsu-green);
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .member-card {
+            border-left: 4px solid var(--wsu-green);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .member-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: var(--wsu-dark-green);
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #4b5563;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Raider<span>Trainer</span></a>
-            <button class="nav-toggle" id="navToggle">&#9776;</button>
-            <nav class="nav-menu" id="navMenu">
-                <ul>
-                    <li><a href="index.html">Overview</a></li>
-                    <li><a href="architecture.html">Architecture</a></li>
-                    <li><a href="deliverables.html">Deliverables</a></li>
-                    <li><a href="reports.html">Weekly Reports</a></li>
-                    <li><a href="team.html" class="active">Team</a></li>
-                </ul>
-            </nav>
-        </div>
+
+    <header>
+        <h1>Raider Trainer</h1>
+        <p>Project Team & Individual Contributions</p>
     </header>
 
-    <section class="section container">
-        <h2 class="section-title">Development Team</h2>
-        <div class="team-grid">
-            <div class="team-card">
-                <div class="avatar">PP</div>
-                <h3>Prince Patel</h3>
-                <p class="role">Backend Lead</p>
-                <p class="bio">Responsible for the core Python backend, integrating OpenCV camera multithreading, YOLO pose estimation, and database state management.</p>
-            </div>
-            <div class="team-card">
-                <div class="avatar">DJ</div>
-                <h3>Dipika Jirel</h3>
-                <p class="role">Frontend Lead</p>
-                <p class="bio">Responsible for the desktop application GUI, mapping PyQt6 user interfaces, dynamic video widgets, and form feedback visualizers.</p>
-            </div>
-            <div class="team-card">
-                <div class="avatar">DB</div>
+    <nav>
+        <a href="index.html">Overview</a>
+        <a href="team.html">Team & Roles</a>
+        <a href="reports.html">Status Reports</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Team Roster & Responsibilities</h2>
+            
+            <div class="member-card">
                 <h3>Daniel Blair</h3>
-                <p class="role">Website & Operations Lead</p>
-                <p class="bio">Computer science student at Wright State University responsible for building the project documentation website, coordinating weekly reports, and managing team deliverables.</p>
+                <p><strong>Role:</strong> Lead Developer / Software Architecture</p>
+                <ul>
+                    <li>Assisted in the development of the front-end graphical user interface of the desktop application using PyQt6.</li>
+                    <li>Designed and implemented the secure flat-file JSON data storage layer, SHA-256 password hashing, and automated account lockout security protocols.</li>
+                    <li>Engineered window routing logic between authentication portals, administrator panels, and standard user workout dashboards.</li>
+                </ul>
             </div>
-        </div>
-    </section>
-    
+
+            <div class="member-card">
+                <h3>Prince</h3>
+                <p><strong>Role:</strong> Computer Vision & Sensor Integration</p>
+                <ul>
+                    <li>Focused on OpenCV and YOLO pose-estimation frameworks.</li>
+                    <li>Managing real-time video stream ingestion and processing pipelines for form feedback.</li>
+                </ul>
+            </div>
+
+            <div class="member-card">
+                <h3>Dipika</h3>
+                <p><strong>Role:</strong> UI/UX and Testing Integration</p>
+                <ul>
+                    <li>Assisted with design specifications, user workflow validation, and quality assurance testing.</li>
+                    <li>Collaborated on user documentation and presentation deliverables.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 Raider Trainer Development Team. Built for WSU Term Project.</p>
-        </div>
+        <p>&copy; 2026 Raider Trainer Team. Wright State University Computer Science Department.</p>
     </footer>
-    <script src="script.js"></script>
+
 </body>
 </html>
