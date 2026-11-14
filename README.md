@@ -4,14 +4,14 @@
   
   [![Python](https://img.shields.io/badge/Python-3.x-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/)
   [![OpenCV](https://img.shields.io/badge/Vision-OpenCV-5C3EE8.svg?style=flat&logo=opencv&logoColor=white)](https://opencv.org/)
-  [![Website](https://img.shields.io/badge/Live-Website-026937.svg?style=flat)](https://deepikaJirel.github.io/RaiderTrainer/)
+  [![Website](https://img.shields.io/badge/Live-Website-026937.svg?style=flat)](https://daniel00blair.github.io/raider-trainer-website/index.html)
 </div>
 
 ---
 
 > Raider Trainer is a 100% Python full-stack desktop application that tracks upper-body workouts in real-time, enforces correct form thresholds, and monitors strength training progress using deep learning and computer vision.
 
-🔗 **[View the Live Project Website & Demos](https://deepikaJirel.github.io/RaiderTrainer/)**
+🔗 **[View the Live Project Website & Demos](https://daniel00blair.github.io/raider-trainer-website/index.html)**
 
 ## ✨ Core Features
 
